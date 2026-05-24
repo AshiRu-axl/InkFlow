@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from app.routers import studio
+from app.routers import (studio, unit
+)
 
 app = FastAPI(
     title="IknFlow API",
@@ -7,6 +8,7 @@ app = FastAPI(
 )
 
 app.include_router(studio.router)
+app.include_router(unit.router)
 
 @app.get("/")
 def root():
