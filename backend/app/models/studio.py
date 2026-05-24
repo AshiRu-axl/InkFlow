@@ -1,7 +1,5 @@
 from sqlalchemy import Column, Integer, String
 from app.database import Base
-from pydantic import BaseModel
-
 
 class Studio(Base):
     __tablename__ = "studio"
